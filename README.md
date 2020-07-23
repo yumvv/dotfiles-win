@@ -14,6 +14,9 @@ scoop install git vim
 
 ## セットアップ
 ```
+git clone git@github.com:muquu/dotfiles-win.git $HOME\dotfiles
+```
+```
 .\setup.ps1
 ```
 シンボリックリンクの数だけUACのダイアログが出ます。
