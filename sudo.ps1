@@ -1,4 +1,5 @@
-﻿function Invoke-CommandRunAs
+﻿#[PowerShellでsudo](https://qiita.com/twinkfrag/items/3afb9032fd73eabe09be)
+function Invoke-CommandRunAs
 {
     $cd = (Get-Location).Path
     $commands = "Set-Location $cd; Write-Host `"[Administrator] $cd> $args`"; $args; Pause; exit"

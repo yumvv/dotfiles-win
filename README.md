@@ -16,6 +16,7 @@ scoop install git vim
 ```
 git clone git@github.com:muquu/dotfiles-win.git $HOME\dotfiles
 ```
+クローンするフォルダの名前に注意。
 ```
 .\setup.ps1
 ```
