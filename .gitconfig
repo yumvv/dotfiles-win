@@ -8,3 +8,7 @@
 	safecrlf = true
 [pager]
 	branch = false
+[pull]
+	ff = only
+[credential]
+	helper = manager
