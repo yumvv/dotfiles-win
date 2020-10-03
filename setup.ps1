@@ -32,6 +32,7 @@ else
 $files = @(
 "mercurial.ini",
 ".vimrc",
+".gemrc",
 ".gitconfig"
 )
 
