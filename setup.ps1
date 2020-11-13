@@ -11,6 +11,7 @@ else
 {
     # 読み込みたいファイルを書いてください
     $src = @(
+    "common.ps1",
     "sudo.ps1",
     "rmrf.ps1"
     )
