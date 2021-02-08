@@ -28,6 +28,8 @@ git clone git@github.com:muquu/dotfiles-win.git $HOME\dotfiles
 
 VSCodeの統合PowerShellから ``setup.ps1`` を実行するとファイル名が違う、別のプロファイルが作成される場合があります。
 
+``Documents\WindowsPowerShell`` フォルダは ``setup.ps1`` の事前に作成しないとプロファイルが新規作成されない可能性があります。
+
 ## Emacsライクなキーバインディング
 https://hnakamur.github.io/blog/2020/02/22/powershell-emacs-like-keybindings/
 
