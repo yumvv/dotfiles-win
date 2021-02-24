@@ -42,3 +42,10 @@ PowerShell を管理者権限で開き、以下のコマンドで PowerShellGet 
 次に PSReadLine をインストールします。
 
     Install-Module -Name PSReadLine
+
+## ``msbuild`` ``cl.exe`` 等のコマンドを使う
+
+VSをインストール後に以下のGistをプロファイルに追記する
+
+* https://gist.github.com/muquu/d8faf7532747d8a132cb638e3e79d937
+
