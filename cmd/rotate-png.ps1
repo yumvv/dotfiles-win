@@ -4,7 +4,7 @@
 .DESCRIPTION
 カレントフォルダにあるPNGを指定された角度へ回転させる
 .EXAMPLE
-cd \path\to\folder&& rotate-png.ps1
+cd \path\to\folder && rotate-png.ps1
 .PARAMETER target
 -?:このヘルプ <CommonParameters> はサポートしていません
 #>
@@ -27,9 +27,9 @@ Add-Type -AssemblyName System.Drawing
 $TargetDir = Get-Location
 Write-Host "作業フォルダ:" "$TargetDir"
 
-$RotateSwitch = Read-Host "回転させたい角度の番号を入力(時計回り)`r`n0: 90°`r`n1: 180°`r`n2: 270°(-90°)`r`n"
+$RotateSwitch = Read-Host "回転させたい角度の番号を入力(時計回り)`r`n1: 90°`r`n2: 180°`r`n3: 270°(-90°)`r`n"
 
-if ( -Not ($RotateSwitch -eq 0) -Or ($RotateSwitch -eq 1) -Or ($RotateSwitch -eq 2))
+if ( -Not ($RotateSwitch -in @('1','2','3')))
 {
     Write-Host エラー: 指定された番号を入力してください
     exit
@@ -45,16 +45,16 @@ foreach($item in $itemList)
     switch($RotateSwitch)
     {
         # 90°回転
-        0 {
-            $image.RotateFlip("Rotate90FlipNone") 
+        1 {
+            $image.RotateFlip("Rotate90FlipNone")
         }
         # 180°回転
-        1 {
-            $image.RotateFlip("Rotate180FlipNone") 
+        2 {
+            $image.RotateFlip("Rotate180FlipNone")
         }
         # 270°(-90°)回転
-        2 {
-            $image.RotateFlip("Rotate270FlipNone") 
+        3 {
+            $image.RotateFlip("Rotate270FlipNone")
         }
     }
     # 保存
