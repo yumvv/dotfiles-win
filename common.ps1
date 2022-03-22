@@ -13,3 +13,14 @@ Set-PSReadLineKeyHandler -Key Ctrl+d -Function DeleteChar
 # > command | vless
 function VimPager { $input | Out-File $env:tmp/tmp.txt; nvim -u NONE $env:tmp/tmp.txt }
 Set-Alias vless VimPager
+
+# Python
+# PIP and all outdated packages
+# https://thecesrom.dev/2021/05/26/the-one-liner-for-updating-pip-and-all-outdated-packages/
+function global:Update-Pip {
+  $packages = python -m pip list --outdated --format=freeze
+  foreach ($package in $packages) {
+    $pkg = $package.split("==")[0]
+    python -m pip install --upgrade $pkg
+  }
+}
