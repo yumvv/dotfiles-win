@@ -14,3 +14,5 @@
 	helper = manager-core
 [credential "helperselector"]
 	selected = manager-core
+[credential "http://repos.home"]
+	provider = generic

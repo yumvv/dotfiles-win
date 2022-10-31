@@ -17,10 +17,14 @@ Set-Alias vless VimPager
 # Python
 # PIP and all outdated packages
 # https://thecesrom.dev/2021/05/26/the-one-liner-for-updating-pip-and-all-outdated-packages/
+# ERROR: List format 'freeze' can not be used with the --outdated option.
+# https://discuss.python.org/t/pip-22-3-list-list-format-freeze-can-not-be-used-with-the-outdated-option/20061
+# jqコマンドが必要
+# scoop install jq
 function global:Update-Pip {
-  $packages = python -m pip list --outdated --format=freeze
+  $packages = python -m pip list --outdated --format=json | jq -r '.[] | .name+\"=\"+.latest_version'
   foreach ($package in $packages) {
-    $pkg = $package.split("==")[0]
+    $pkg = $package.split("=")[0]
     python -m pip install --upgrade $pkg
   }
 }
