@@ -16,3 +16,5 @@
 	selected = manager-core
 [credential "http://repos.home"]
 	provider = generic
+[init]
+	defaultBranch = main
