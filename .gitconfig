@@ -1,5 +1,5 @@
 [user]
-  name = yumuu
+	name = yumvv
   email = yumuu@vuwuv.com
 [push]
 	default = matching
@@ -13,8 +13,13 @@
 [credential]
 	helper = manager-core
 [credential "helperselector"]
-	selected = manager-core
+	selected = <no helper>
 [credential "http://repos.home"]
 	provider = generic
 [init]
 	defaultBranch = main
+[filter "lfs"]
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f

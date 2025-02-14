@@ -31,7 +31,8 @@ Plugin 'gmarik/Vundle.vim'
 " Appearance {{{
 
   " カラースキーマ
-  Plugin 'muquu/molokai'
+  "Plugin 'muquu/molokai'
+  Plugin 'sainnhe/sonokai'
 
   " ステータスラインをカッコよくする
   "Plugin 'Lokaltog/vim-powerline'
